@@ -10,6 +10,8 @@ echo "FILE_TYPE:: ${FILE_TYPE}"
 echo "PREFIX:: ${PREFIX}"
 echo "UUID:: ${UUID}"
 echo "LIVE_DATA_ENABLED:: ${LIVE_DATA_ENABLED}"
+echo "" | tee -a /etc/hosts
+echo "52.116.227.165    www.drugs.com" >> /etc/hosts
 
 sigterm_handler() {
   if [ $pypid -ne 0 ]; then
